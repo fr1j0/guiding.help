@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Guided Help`,
+    title: `Guiding Help`,
     description: `Online counseling services.`,
     author: `@fr1j0`,
   },
