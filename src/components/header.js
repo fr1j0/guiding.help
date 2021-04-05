@@ -15,9 +15,9 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <p style={{ margin: 0, fontFamily: "sans-serif" }}>
+      {/* <p style={{ margin: 0, fontFamily: "sans-serif" }}>
         Life coaching and counseling coming soon.
-      </p>
+      </p> */}
     </div>
   </header>
 )
