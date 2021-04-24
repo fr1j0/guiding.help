@@ -2,17 +2,15 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import "./styles.sass"
 
-const Bio = () => {
+const BioSecondary = () => {
   return (
-    <div className="bio">
-      <div className="bio__content">
-        <div className="bio__text">
-          <h1>
-            Hi, <span>I'm Joanne Rayment</span>
-          </h1>
-          <p className="bio__description">
-            A nurse, wife, mother, grandmother and an unshakable optimist
-            dedicated in helping you become the person you most want to be.
+    <div className="bio-secondary">
+      <div className="bio-secondary__content">
+        <div className="bio-secondary__text">
+          <h2>Life is a journey</h2>
+          <p className="bio-secondary__description">
+            Any journey always starts by taking the first step, contact me now
+            to start yours.
           </p>
         </div>
       </div>
@@ -20,7 +18,7 @@ const Bio = () => {
   )
 }
 
-export default Bio
+export default BioSecondary
 
 /*
  Hi everyone my name is Joanne Rayment and I am a newly certified
