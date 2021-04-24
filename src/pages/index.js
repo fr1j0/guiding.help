@@ -1,22 +1,18 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
-import "../components/index.css"
+import Bio from "../components/bio"
+import Services from "../components/services"
+import Motivation from "../components/motivation"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-
-    <StaticImage
-      class="logo"
-      src="../images/guiding-logo.svg"
-      width={100}
-      quality={100}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="Guiding help"
-      style={{ marginBottom: `1.45rem` }}
-      layout="fullWidth "
+    <Bio />
+    <Services />
+    <Motivation
+      header="Change starts with a single step"
+      description="And that first step could be as simple as scheduling a no-cost discovery call to see if I’m the right person to help you make your difference."
     />
   </Layout>
 )
