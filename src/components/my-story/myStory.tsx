@@ -5,17 +5,31 @@ import "./styles.sass"
 const MyStory = () => {
   return (
     <div className="my-story">
-      <h1>This is my life journey:</h1>
       <StaticImage
-        class="my-story-photo"
-        src="../../images/jo-main.jpg"
-        width={200}
+        className="my-story-photo"
+        src="../../images/jo2.jpg"
+        width={250}
+        height={400}
         quality={100}
         alt="Guiding help"
         layout="fixed"
         placeholder="none"
       />
 
+      <h1>This is my life journey</h1>
+      <p>
+        My experiences have given me a genuine empathy and a real desire to
+        support and guide people on the path to recovery. My goal is to be a
+        safe haven to anybody who needs it, you are not alone. I’m approachable
+        and do not judge. I have chosen to specialize in the fields in which I
+        have experience in. My guiding structure enables my clients to access
+        their full potential. I assist them in making positive changes within
+        themselves, to unleash their inner, happier self. During my sessions my
+        clients discover the answers they need to move forward mentally,
+        emotionally and physically. The power to take back control and to lead a
+        healthier, happier life is within all of us. All you need is the
+        guidance on how to access it.
+      </p>
       <p>
         From a very young age I would quickly realize that life would not always
         be easy. A very traumatic experience as a child (one in which I did not
@@ -41,7 +55,7 @@ const MyStory = () => {
         anti-anxiety medication I looked at myself in the mirror and just said
         NO. No more. I had two choices, I could allow the events of my life to
         beat me here and now or I could stop, turn and face them and take back
-        the control I had lost. I choose to find a way back to my inner happier
+        the control I had lost. I chose to find a way back to my inner happier
         self and to master control over my mental health issues. For many years
         I struggled, I had counselling and slowly bit by bit I regained control
         over all my anxieties and day by day I became stronger and stronger.
@@ -57,18 +71,7 @@ const MyStory = () => {
         however, that does not mean that my anxieties or fears totally went
         away. They are still with me but no longer have control, I control them.
         Today it’s my turn to give back and to show everyone that there is a
-        light at the end of the tunnel. If I can do it so, can you. My
-        experiences have given me a genuine empathy and a real desire to support
-        and guide people on the path to recovery. My goal is to be a safe haven
-        to anybody who needs it, you are not alone. I’m approachable and do not
-        judge. I have chosen to specialize in the fields in which I have
-        experience in. My guiding structure enables my clients to access their
-        full potential. I assist them in making positive changes within
-        themselves, to unleash their inner, happier self. During my sessions my
-        clients discover the answers they need to move forward mentally,
-        emotionally and physically. The power to take back control and to lead a
-        healthier, happier life is within all of us. All you need is the
-        guidance on how to access it.{" "}
+        light at the end of the tunnel. If I can do it, so can you.{" "}
       </p>
       <p>Let me be that guide.</p>
     </div>

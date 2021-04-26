@@ -5,8 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
+import React, { useEffect, useRef, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../components/header"
@@ -15,6 +14,35 @@ import "./layout.css"
 import "./global.sass"
 
 const Layout = ({ children }) => {
+  const mainRef = useRef(null)
+  const [block1st, setBlock1st] = useState()
+  const [headerScrolled, setheaderScrolled] = useState(false)
+
+  useEffect(() => {
+    if (!block1st) return
+
+    let options = {
+      rootMargin: "-810px 0px 0px 0px",
+    }
+
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        console.log(entry)
+        setheaderScrolled(!entry.isIntersecting)
+      })
+    }, options)
+
+    observer.observe(block1st)
+
+    return () => {
+      observer.unobserve(block1st)
+    }
+  }, [block1st])
+
+  useEffect(() => {
+    setBlock1st(document.querySelector(".block-1st"))
+  }, [])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,15 +55,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title} />
-      <main className="main__content">{children}</main>
+      <Header
+        siteTitle={data.site.siteMetadata?.title}
+        scrolled={headerScrolled}
+      />
+      <main ref={mainRef} className="main__content">
+        {children}
+      </main>
       <Footer />
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

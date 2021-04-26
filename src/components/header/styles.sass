@@ -5,18 +5,32 @@
     height: 4rem
     padding: .5rem 0
     position: fixed
-    background-color: #fff
-    border-bottom: 1px solid #d7d7d7
+    display: flex
+    align-items: center
 
-    -webkit-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
-    -moz-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
-    box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
+    transition: all ease 150ms
+
+    &--scrolled
+        height: 3.2em
+
+        background-color: #fff
+        -webkit-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
+        -moz-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
+        box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
 
     &__content
+        width: 100%
         margin: 0 auto
         max-width: 1080px
         display: flex
         justify-content: space-between
+        align-items: center
+        position: relative
+
+        .logo
+            &--scrolled
+                height: 45px !important
+                width: 60px !important
 
     &__menu
         margin: 0
@@ -30,14 +44,33 @@
             margin: 0 1rem
 
             a
-                color: #5c5c5c
+                opacity: 1
+                color: #9b9b9b
                 text-decoration: none
                 text-transform: uppercase
                 transition: color .25s ease-out
                 font-weight: 600
+                position: relative
+
+                &:not(.btn-border)
+                    &::before
+                        content: ''
+                        display: block
+                        height: 2px
+                        background-color: #7b7b7b
+                        position: absolute
+                        bottom: -.5em
+                        left: 0
+                        right: 0
+                        transform: scale(0,1)
+                        transition: transform ease-in-out 250ms
+                        border-radius: 4px
 
                 &:hover
                     color: #2b2b2b
 
+                    &::before
+                        transform: scale(1,1)
+
                 &.active
-                    color: #980060
+                    color: #4f4f4f

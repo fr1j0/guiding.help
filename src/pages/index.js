@@ -12,16 +12,15 @@ const IndexPage = () => (
     <Bio />
     <ServicesPods />
     <Motivation
-      color="#FDF1ED"
       header="Therapy, counselling and guidance."
       description="Therapy is not about allowing another influence to take control of your life. It's about you learning how to  make changes and take control."
     />
     <BioSecondary />
     <Motivation
-      color="#FDF1ED"
       header="Happiness"
       description="Happiness is not the absence of having problems, but the ability and skills to deal with them."
     />
+    <BioSecondary />
   </Layout>
 )
 
