@@ -1,17 +1,28 @@
 @import '../global.sass'
 
 .bio-secondary
-    &__content
-        background-image: url('../../images/jo1.jpg')
+
+    &--background
+        background-image: url('../../images/jo4.jpg')
         background-repeat: no-repeat
-        background-size: contain
-        background-position-x: left
+        background-size: cover
+        background-position-x: center
+        background-position-y: center
+
+    &__content
         margin: 0 auto
         display: flex
         justify-content: space-between
         max-width: 1080px
-        padding: 4rem 0 2rem 0
+        padding: 10rem 0 2rem 0
         z-index: 1
+
+        &--right
+            background-position-x: right
+            background-image: url('../../images/jo3.jpg')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position-x: right
 
     &__text
         padding: 6rem 0
@@ -19,6 +30,9 @@
         width: 50%
         left: 50%
         position: relative
+
+        &--right
+            left: 0
 
         h1,h2
             font-family: 'Dancing Script', cursive

@@ -15,12 +15,13 @@ const IndexPage = () => (
       header="Therapy, counselling and guidance."
       description="Therapy is not about allowing another influence to take control of your life. It's about you learning how to  make changes and take control."
     />
-    <BioSecondary />
+    <BioSecondary background={true} side="left" />
     <Motivation
       header="Happiness"
       description="Happiness is not the absence of having problems, but the ability and skills to deal with them."
     />
-    <BioSecondary />
+
+    <BioSecondary side="right" />
   </Layout>
 )
 

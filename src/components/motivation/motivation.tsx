@@ -10,7 +10,7 @@ const Motivation = ({ header, description }: Props) => {
   return (
     <div className="motivation">
       <div className="motivation__content">
-        <h3>{header}</h3>
+        <h2>{header}</h2>
         <p>{description}</p>
       </div>
     </div>
