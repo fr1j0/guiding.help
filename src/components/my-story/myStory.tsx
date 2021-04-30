@@ -4,7 +4,7 @@ import "./styles.sass"
 
 const MyStory = () => {
   return (
-    <div className="my-story">
+    <section className="my-story block-1st">
       <StaticImage
         className="my-story-photo"
         src="../../images/jo2.jpg"
@@ -74,7 +74,7 @@ const MyStory = () => {
         light at the end of the tunnel. If I can do it, so can you.{" "}
       </p>
       <p>Let me be that guide.</p>
-    </div>
+    </section>
   )
 }
 

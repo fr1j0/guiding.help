@@ -8,12 +8,12 @@ type Props = {
 
 const Motivation = ({ header, description }: Props) => {
   return (
-    <div className="motivation">
+    <section className="motivation">
       <div className="motivation__content">
         <h2>{header}</h2>
         <p>{description}</p>
       </div>
-    </div>
+    </section>
   )
 }
 

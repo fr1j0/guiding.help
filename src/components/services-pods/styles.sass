@@ -1,3 +1,5 @@
+@import '../global.sass'
+
 .services-pods
     margin: 0 auto
     min-height: 200px
@@ -11,12 +13,16 @@
 
     &__list
         display: flex
+        margin: 0
         list-style-type: none
+        position: relative
+        padding: 0 1rem
+
+        @media (max-width: $tablet)
+            flex-direction: column
+            align-items: center
 
         li
-            padding: 1rem
-
-        .service-pod
             width: 25%
             height: 11rem
             padding: 1rem
@@ -26,17 +32,25 @@
             justify-content: center
             align-items: center
 
-            &:nth-child(1)
-                background: #CFF090
-            &:nth-child(2)
-                background: #FFE9A7
-            &:nth-child(3)
-                background: #A6E0EE
-            &:nth-child(4)
-                background: #FFBEE3
-            &:nth-child(5)
-                background: #FDE2E6
+            padding: 1rem
 
+            a
+                text-decoration: none
+                color: black
+
+            @media (max-width: $tablet)
+                width: 100%
+
+            &:nth-child(1)
+                background: linear-gradient(180deg, #f1fcdd,#CFF090)
+            &:nth-child(2)
+                background: linear-gradient(180deg, #fcf5e1,#FFE9A7)
+            &:nth-child(3)
+                background: linear-gradient(180deg, #d7e7eb,#A6E0EE)
+            &:nth-child(4)
+                background: linear-gradient(180deg, #fae6f2,#FFBEE3)
+            &:nth-child(5)
+                background: linear-gradient(180deg, #f9f5f6,#FDE2E6)
             h3
                 display: flex
                 align-items: center

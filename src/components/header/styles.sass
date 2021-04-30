@@ -1,3 +1,5 @@
+@import '../global.sass'
+
 .header
     width: 100%
     top: 0
@@ -7,12 +9,11 @@
     position: fixed
     display: flex
     align-items: center
-
     transition: all ease 150ms
+    padding: 0 2rem
 
     &--scrolled
-        height: 3.2em
-
+        height: 3.2rem
         background-color: #fff
         -webkit-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
         -moz-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.25)
@@ -23,7 +24,6 @@
         margin: 0 auto
         max-width: 1080px
         display: flex
-        justify-content: space-between
         align-items: center
         position: relative
 
@@ -32,16 +32,71 @@
                 height: 45px !important
                 width: 60px !important
 
+    &__nav-toggle
+        position: absolute !important
+        top: -9999px !important
+        left: -9999px !important
+
+        &:focus ~ .nav-toggle-label
+            outline: 5px auto rgba(0, 150, 255, 1)
+
+    .nav-toggle-label
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
+        display: flex
+        align-items: center
+        cursor: pointer
+
+        @media (min-width: $tablet)
+            display: none
+
+        & span,
+        & span::before,
+        & span::after
+            display: block
+            background: #4f4f4f
+            height: 3px
+            width: 2em
+            border-radius: 3px
+            position: relative
+
+        & span::before,
+        & span::after
+            content: ''
+            position: absolute
+
+        & span::before
+            bottom: 9px
+
+        & span::after
+            top: 9px
+
+    .nav-toggle:checked ~ nav
+        transform: scale(1,1)
+
+    .nav-toggle:checked ~ nav a
+        opacity: 1
+        transition: opacity 250ms ease-in-out 250ms
+
     &__menu
         margin: 0
         display: flex
         align-items: center
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
 
         li
             margin: 0
             font-size: .75rem
             list-style-type: none
             margin: 0 1rem
+
+            @media (max-width: $tablet)
+                display: none
 
             a
                 opacity: 1

@@ -81,9 +81,6 @@ const Footer = () => (
         <ul>
           <li>© 2021 guiding.help</li>
           <li>
-            <Link to="/privacy-policy">Privacy Policy</Link>
-          </li>
-          <li>
             <Link to="/terms">Terms</Link>
           </li>
           <li>
@@ -91,6 +88,7 @@ const Footer = () => (
               Contact
             </a>
           </li>
+          <li>(971) 54 347 9338</li>
         </ul>
       </div>
     </div>

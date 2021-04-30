@@ -12,7 +12,7 @@ type Props = {
 const BioSecondary = ({ background, side, title, description }: Props) => {
   console.log(side)
   return (
-    <div
+    <section
       className={`bio-secondary ${
         background ? "bio-secondary--background" : ""
       }`}
@@ -25,7 +25,7 @@ const BioSecondary = ({ background, side, title, description }: Props) => {
           <p className="bio-secondary__description">{description}</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,9 +1,15 @@
 .services
     max-width: 1080px
     margin: 0 auto
+    padding: 6rem 2rem 2rem 2rem
 
-    h1
-        padding: 2rem 0
+    h2
+        &::before
+            content: ''
+            display: block
+            height: 5rem
+            margin-top: -5rem
+            visibility: hidden
 
     p
         font-size: .85rem

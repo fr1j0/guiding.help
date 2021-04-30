@@ -21,6 +21,7 @@ const Header = ({ scrolled }: Props) => (
           placeholder="none"
         />
       </Link>
+      <input type="checkbox" id="nav-toggle" className="header__nav-toggle" />
       <nav>
         <ul className="header__menu">
           <li>
@@ -29,12 +30,12 @@ const Header = ({ scrolled }: Props) => (
             </Link>
           </li>
           <li>
-            <Link to="/my-story" activeClassName="active">
+            <Link to="/my-story/" activeClassName="active">
               My story
             </Link>
           </li>
           <li>
-            <Link to="/services" activeClassName="active">
+            <Link to="/services/" activeClassName="active">
               Services
             </Link>
           </li>
@@ -49,6 +50,9 @@ const Header = ({ scrolled }: Props) => (
           </li>
         </ul>
       </nav>
+      <label htmlFor="nav-toggle" className="nav-toggle-label">
+        <span></span>
+      </label>
     </div>
   </header>
 )

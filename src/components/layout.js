@@ -22,7 +22,8 @@ const Layout = ({ children }) => {
     if (!block1st) return
 
     let options = {
-      rootMargin: "-810px 0px 0px 0px",
+      rootMargin: "-53% 0px 0px 0px",
+      threshold: [0.4],
     }
 
     let observer = new IntersectionObserver((entries, observer) => {
