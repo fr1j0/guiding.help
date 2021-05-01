@@ -4,7 +4,7 @@ import "./styles.sass"
 
 const Bio = () => {
   return (
-    <section className="bio block-1st">
+    <section className="bio">
       <div className="bio__content">
         <div className="bio__text">
           <h1>

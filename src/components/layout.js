@@ -5,8 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useEffect, useRef, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { useDebouncedCallback } from "use-debounce"
 
 import Header from "../components/header"
 import Footer from "../components/footer"
@@ -15,34 +16,34 @@ import "./global.sass"
 
 const Layout = ({ children }) => {
   const mainRef = useRef(null)
-  const [block1st, setBlock1st] = useState()
   const [headerScrolled, setheaderScrolled] = useState(false)
+  const [menuEnabled, setmenuEnabled] = useState(true)
+
+  const resizeCheck = useDebouncedCallback(e => {
+    setmenuEnabled(true)
+  }, 500)
+
+  const handleResize = useCallback(() => {
+    setmenuEnabled(false)
+    resizeCheck()
+  }, [resizeCheck])
+
+  const handleScroll = useCallback(e => {
+    setheaderScrolled(window.scrollY >= 50)
+  }, [])
 
   useEffect(() => {
-    if (!block1st) return
-
-    let options = {
-      rootMargin: "-53% 0px 0px 0px",
-      threshold: [0.4],
-    }
-
-    let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        console.log(entry)
-        setheaderScrolled(!entry.isIntersecting)
-      })
-    }, options)
-
-    observer.observe(block1st)
+    window.addEventListener("resize", () => {
+      setmenuEnabled(false)
+      handleResize()
+    })
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      observer.unobserve(block1st)
+      window.removeEventListener("resize", handleResize)
+      window.removeEventListener("scroll", handleScroll)
     }
-  }, [block1st])
-
-  useEffect(() => {
-    setBlock1st(document.querySelector(".block-1st"))
-  }, [])
+  }, [handleResize, handleScroll])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -57,6 +58,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header
+        menuEnabled={menuEnabled}
         siteTitle={data.site.siteMetadata?.title}
         scrolled={headerScrolled}
       />

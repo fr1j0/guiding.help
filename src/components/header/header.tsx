@@ -1,13 +1,14 @@
-import React from "react"
+import React, { RefObject } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./styles.sass"
 
 type Props = {
+  menuEnabled: boolean
   scrolled: boolean
 }
 
-const Header = ({ scrolled }: Props) => (
+const Header = ({ menuEnabled, scrolled }: Props) => (
   <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
     <div className="header__content">
       <Link to="/">
@@ -21,9 +22,15 @@ const Header = ({ scrolled }: Props) => (
           placeholder="none"
         />
       </Link>
-      <input type="checkbox" id="nav-toggle" className="header__nav-toggle" />
+      <input
+        type="checkbox"
+        id="nav-toggle"
+        className="header__nav-toggle"
+        onChange={() => {}}
+        {...(menuEnabled ? {} : { checked: false })}
+      />
       <nav>
-        <ul className="header__menu">
+        <ul>
           <li>
             <Link to="/" activeClassName="active">
               Home

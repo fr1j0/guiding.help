@@ -3,7 +3,7 @@ import "./styles.sass"
 
 const Services = () => {
   return (
-    <section className="services block-1st">
+    <section className="services">
       <h1>Services</h1>
       <h2 id="general-counselling">General Counselling</h2>
       <p>

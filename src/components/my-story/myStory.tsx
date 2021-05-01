@@ -4,7 +4,7 @@ import "./styles.sass"
 
 const MyStory = () => {
   return (
-    <section className="my-story block-1st">
+    <section className="my-story">
       <StaticImage
         className="my-story-photo"
         src="../../images/jo2.jpg"
@@ -15,7 +15,6 @@ const MyStory = () => {
         layout="fixed"
         placeholder="none"
       />
-
       <h1>This is my life journey</h1>
       <p>
         My experiences have given me a genuine empathy and a real desire to
