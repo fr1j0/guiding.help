@@ -14,7 +14,7 @@ const Bio = () => {
       />
 
       <div className="text_block bio__content">
-        <div className="text_block bio__text">
+        <div className="bio__text">
           <h1>
             Hi <span>I'm Joanne Rayment</span>
           </h1>
