@@ -3,18 +3,35 @@
 .my-story
     max-width: $laptop
     margin: 0 auto
-    padding: 6rem 2rem 2rem 2rem
+    padding: 4rem 2rem 2rem 2rem
 
-    h1
-        padding: 0 2rem 0 0
+    &__text
+        padding: 1rem
 
-    p
-        font-size: .85rem
-        text-align: justify
+        h1
+            padding: 0 2rem 0 0
+            font-family: 'poppins'
 
-        &:last-child
-            margin-bottom: 6rem
+        p
+            font-size: .85rem
+            text-align: justify
 
-    &-photo
+            &:last-child
+                margin-bottom: 1rem
+
+    &-image
         float: left
         margin: 0rem 1.5rem 1rem 0
+
+    &-signature
+        margin: 0 1rem 2rem 1rem
+
+@media screen and ( max-width: $tablet )
+    .my-story
+        padding: 0
+
+        &-image
+
+            float: none
+            width: 100% !important
+            min-height: 725px
