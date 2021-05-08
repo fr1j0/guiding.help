@@ -15,7 +15,6 @@ import "./layout.css"
 import "./global.sass"
 
 const Layout = ({ children }) => {
-  const mainRef = useRef(null)
   const [headerScrolled, setheaderScrolled] = useState(false)
   const [menuEnabled, setmenuEnabled] = useState(true)
 
@@ -63,9 +62,7 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata?.title}
         scrolled={headerScrolled}
       />
-      <main ref={mainRef} className="main__content">
-        {children}
-      </main>
+      <main className="main__content">{children}</main>
       <Footer />
     </>
   )
