@@ -54,7 +54,7 @@ const Footer = () => (
           </li>
           <li>
             <a
-              href="https://calendly.com/joanne-141"
+              href="https://calendly.com/joanne-141/free-introductory-session"
               target="blank"
               title="calendly"
             >
@@ -80,9 +80,6 @@ const Footer = () => (
       <div className="footer__copyright">
         <ul>
           <li>© 2021 guiding.help</li>
-          <li>
-            <Link to="/terms">Terms</Link>
-          </li>
           <li>
             <a href="mailto:jo@guiding.help" target="blank">
               Contact

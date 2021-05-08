@@ -1,48 +1,43 @@
 @import '../global.sass'
 
 .bio-secondary
-
-    padding: 2rem
-
-    &--background
-        background-image: url('../../images/jo4.jpg')
-        background-repeat: no-repeat
-        background-size: cover
-        background-position-x: center
-        background-position-y: center
-
-    &__content
-        margin: 0 auto
-        display: flex
-        justify-content: space-between
-        max-width: $laptop
-        padding: 10rem 0 2rem 0
-        z-index: 1
-
-        &--right
-            background-position-x: right
-            background-image: url('../../images/jo3.jpg')
-            background-repeat: no-repeat
-            background-size: 50%
-            background-position-x: right
-            background-position-y: center
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr
 
     &__text
-        padding: 6rem 0
+        z-index: 2
+        align-self: center
+        justify-self: flex-start
+        max-width: 95%
+        grid-row: 1
+        padding: 2.5rem
+        background: white
+
+        h2
+            font-family: 'poppins' !important
+
+    &--left
+        .bio-secondary__text
+            grid-column: 2
+
+        .bio-secondary-image
+            grid-column: 1/-1
+            grid-row: 1
+    &--right
+        .bio-secondary__text
+            grid-column: 1
+            justify-self: flex-end
+
+        .bio-secondary-image
+            grid-column: 2
+            grid-row: 1
+            justify-self: center
+
+    &__text
         font-size: .8rem
-        width: 50%
-        left: 50%
-        position: relative
-
-        &--right
-            left: 0
-
-        h1,h2
-            font-family: 'Dancing Script', cursive
-            color: #f0007c
-            font-size: 3rem
-            span
-                display: block
+        max-width: 65%
+        justify-self: center
 
     &__description
         color: #222222

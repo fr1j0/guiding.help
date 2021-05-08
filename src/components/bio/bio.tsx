@@ -5,14 +5,29 @@ import "./styles.sass"
 const Bio = () => {
   return (
     <section className="bio">
-      <div className="bio__content">
+      <StaticImage
+        className="bio__image"
+        src="../../images/jo-header.jpg"
+        alt=""
+        placeholder="blurred"
+        layout="fullWidth"
+      />
+
+      <div className="text_block bio__content">
         <div className="bio__text">
           <h1>
-            Hi, <span>I'm Joanne Rayment</span>
+            Hi <span>I'm Joanne Rayment</span>
           </h1>
           <p className="bio__description">
-            A former nurse, wife, mother, grandmother and an unshakable optimist
-            dedicated in helping you become the person you most want to be.
+            <p>
+              A former nurse, wife, mother, grandmother and an unshakable
+              optimist dedicated in helping you become the person you most want
+              to be.
+            </p>
+            <p>
+              Certified counsellor/life coach ready to guide and help you regain
+              control of your life.
+            </p>
           </p>
         </div>
       </div>

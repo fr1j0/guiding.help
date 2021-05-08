@@ -34,6 +34,7 @@ module.exports = {
         fonts: [
           `poppins`,
           `Dancing Script`,
+          `Source Sans Pro`,
           `Permanent Marker`,
           `source sans pro\:300,400,400i,700,800`, // you can also specify font weights and styles
         ],

@@ -15,7 +15,6 @@ const Header = ({ menuEnabled, scrolled }: Props) => (
         <StaticImage
           className={`logo ${scrolled ? "logo--scrolled" : ""}`}
           src="../../images/guiding-help-logo.svg"
-          width={100}
           quality={100}
           alt="Guiding help"
           layout="fullWidth"
@@ -49,7 +48,7 @@ const Header = ({ menuEnabled, scrolled }: Props) => (
           <li>
             <a
               className="btn-border"
-              href="https://calendly.com/joanne-141"
+              href="https://calendly.com/joanne-141/free-introductory-session"
               target="blank"
             >
               Book a call

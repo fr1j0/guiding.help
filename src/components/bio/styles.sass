@@ -1,39 +1,27 @@
 @import '../global.sass'
 
 .bio
+    font-size: 1rem
     background-color: #f2f2f2
-    background-image: url('../../images/jo-header.jpg')
-    background-repeat: no-repeat
-    background-size: cover
-    background-position-x: center
-    background-position-y: center
-    padding: 2rem
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr
+
+    &__image
+        grid-column: 1/-1
+        grid-row: 1
 
     &__content
+        z-index: 2
+        padding: 2rem
+        grid-column: 1
+        grid-row: 1
+        align-self: center
+        justify-self: flex-end
+        max-width: 75%
 
-        margin: 0 auto
-        display: flex
-        justify-content: space-between
-        max-width: $laptop
-        z-index: 1
-
-    &__text
-        padding: 10rem 0 20rem 0
-        font-size: .8rem
-
-        h1
-            font-family: 'Dancing Script', cursive
-            color: #f0007c
-            font-size: 3.25rem
-            line-height: 2ch
-            margin-bottom: 3.5rem
-
-            span
-                display: block
-
-    &__description
-        color: #4f4f4f
-        font-size: 1.15rem
-        max-width: 55%
-        line-height: 2.6ch
-        letter-spacing: .01ch
+@media screen and ( max-width: $tablet )
+    .bio__content
+        grid-column: 1/-1
+        grid-row: 1
+        justify-self: flex-start
