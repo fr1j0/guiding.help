@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
   }, [resizeCheck])
 
   const handleScroll = useCallback(e => {
+    console.log(window.scrollY)
     setheaderScrolled(window.scrollY >= 50)
   }, [])
 

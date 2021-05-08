@@ -24,6 +24,10 @@
         .bio-secondary-image
             grid-column: 1/-1
             grid-row: 1
+
+            @media screen and ( max-width: $tablet )
+                min-height: 625px
+
     &--right
         .bio-secondary__text
             grid-column: 1
@@ -34,6 +38,16 @@
             grid-row: 1
             justify-self: center
 
+            @media screen and ( max-width: $tablet )
+                justify-self: center
+                grid-column: 1/-1
+
     &__text
         max-width: 65%
         justify-self: center
+
+    @media screen and ( max-width: $tablet )
+        .bio-secondary__text
+            grid-column: 1/-1
+            max-width: 100%
+            background: rgba(255,255,255,.75)

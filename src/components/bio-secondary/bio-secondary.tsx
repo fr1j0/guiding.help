@@ -23,7 +23,7 @@ const BioSecondary = ({ side, title, description }: Props) => {
       )}
       <div className={`text_block bio-secondary__text`}>
         <h2>{title}</h2>
-        <p className="bio-secondary__description">
+        <div className="bio-secondary__description">
           {side === "left" ? (
             <>
               <p>
@@ -50,7 +50,7 @@ const BioSecondary = ({ side, title, description }: Props) => {
               </p>
             </>
           )}
-        </p>
+        </div>
       </div>
       {side === "right" && (
         <StaticImage
