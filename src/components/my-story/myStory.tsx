@@ -82,7 +82,7 @@ const MyStory = () => {
       <StaticImage
         className="my-story-signature"
         src="../../images/signature.png"
-        width={150}
+        width={125}
         quality={100}
         alt="Joanne"
         layout="fixed"
