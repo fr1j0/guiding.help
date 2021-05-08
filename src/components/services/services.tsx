@@ -5,7 +5,7 @@ import "./styles.sass"
 const Services = () => {
   return (
     <section className="services">
-      <StaticImage
+      {/* <StaticImage
         className="services-image"
         src="../../images/jo2.jpg"
         width={250}
@@ -14,7 +14,7 @@ const Services = () => {
         alt="Guiding help"
         layout="fixed"
         placeholder="none"
-      />
+      /> */}
       <h1>Services</h1>
       <h2 id="general-counselling">General Counselling</h2>
       <p>
