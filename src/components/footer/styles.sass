@@ -44,6 +44,7 @@ footer
             display: flex
             justify-content: center
             font-size: .8rem
+            text-align: center
 
         &__copyright
             display: flex
@@ -51,15 +52,17 @@ footer
             font-size: .7rem
             padding: 1rem
             color: #555555
+            margin: 0
 
-            ul
-                display: flex
-                margin: 0
-                li
-                    margin: 0 !important
-                    padding: 0 1.25rem
-                    list-style-type: none
+            li
+                margin: 0 !important
+                padding: 0 1.25rem
+                list-style-type: none
 
-                    a
-                        text-decoration: none
-                        color: #777
+                a
+                    text-decoration: none
+                    color: #777
+
+            @media screen and ( max-width: $tablet )
+                flex-direction: column
+                align-items: center
