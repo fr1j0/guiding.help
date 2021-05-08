@@ -41,7 +41,9 @@ const BioSecondary = ({ side, title, description }: Props) => {
               <p>
                 Counselling can help you to deal with difficulties that you are
                 facing and to gain a deeper insight into yourself. My passion is
-                helping people find peace, meaning and hope in their lives.
+                helping people find peace, meaning and hope in their lives.{" "}
+              </p>
+              <p>
                 Therapy helps you gain a different perspective on experiences
                 and issues and gives you time and space to work through your
                 problems.
