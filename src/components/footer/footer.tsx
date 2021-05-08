@@ -79,12 +79,12 @@ const Footer = () => (
       </div>
       <ul className="footer__copyright">
         <li>© 2021 guiding.help</li>
+        <li>(971) 54 347 9338</li>
         <li>
           <a href="mailto:jo@guiding.help" target="blank">
             Contact
           </a>
         </li>
-        <li>(971) 54 347 9338</li>
       </ul>
     </div>
   </footer>
