@@ -40,30 +40,15 @@
         display: none
         align-items: center
         cursor: pointer
+        font-size: 2.5rem
+        color: #4f4f4f
+        min-width: 50px
 
         @media (max-width: $tablet)
             display: flex
+            flex-direction: column
+            justify-content: center
 
-        & span,
-        & span::before,
-        & span::after
-            display: block
-            background: #4f4f4f
-            height: 3px
-            width: 2em
-            border-radius: 3px
-            position: relative
-
-        & span::before,
-        & span::after
-            content: ''
-            position: absolute
-
-        & span::before
-            bottom: 9px
-
-        & span::after
-            top: 9px
     nav
         ul
             margin: 0
@@ -148,3 +133,24 @@
         a
             opacity: 1
             transition: opacity 250ms ease-in-out 250ms
+
+        + .nav-toggle-label
+            span:nth-child(1)
+                -webkit-transform: rotate(45deg)
+                -moz-transform: rotate(45deg)
+                -o-transform: rotate(45deg)
+                transform: rotate(45deg)
+                top: -3px
+                left: 8px
+
+            span:nth-child(2)
+                width: 0%
+                opacity: 0
+
+            span:nth-child(3)
+                -webkit-transform: rotate(-45deg)
+                -moz-transform: rotate(-45deg)
+                -o-transform: rotate(-45deg)
+                transform: rotate(-45deg)
+                top: 19px
+                left: 8px
