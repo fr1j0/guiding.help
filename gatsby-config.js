@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Guiding Help`,
-    description: `Online counseling services.`,
+    siteUrl: `https://guiding.help/`,
+    description: `Afordable one to one online counseling. 30min Free Discovery Call. Retrain your anxious brain and unleash your full potential.`,
+    keywords: `counseling, mental health, life coach, anxiety, depression, sexual abuse, panic attack, stress, talk therapy`,
     author: `@fr1j0`,
   },
   plugins: [
