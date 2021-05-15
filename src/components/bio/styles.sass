@@ -17,15 +17,41 @@
         grid-column: 1
         grid-row: 1
         align-self: center
-        justify-self: flex-end
-        max-width: 75%
+        justify-self: center
+        max-width: 85%
 
-@media screen and ( max-width: $tablet )
+        p
+            max-width: 60ch
+
+@media screen and ( min-width: $desktop )
+    .bio__content
+        h1
+            font-size: 4em
+
+@media screen and ( max-width: $desktop )
     .bio__content
         grid-column: 1/-1
         grid-row: 1
         justify-self: flex-start
 
-    .bio__text
+    .bio__content
         h1
-            font-size: 3.5em !important
+            font-size: 3em !important
+
+@media screen and ( max-width: 965px )
+    .bio__content
+        max-width: 60%
+
+@media screen and ( max-width: $tablet )
+    .bio__content
+        h1
+            margin-bottom: 1.5rem !important
+
+@media screen and ( max-width: 615px )
+    .bio__content
+        h1
+            font-size: 2.5em !important
+
+    .bio__description
+        p
+            font-size: 1em !important

@@ -14,21 +14,18 @@ const Bio = () => {
       />
 
       <div className="text_block bio__content">
-        <div className="bio__text">
-          <h1>
-            Hi <span>I'm Joanne Rayment</span>
-          </h1>
-          <div className="bio__description">
-            <p>
-              A former nurse, wife, mother, grandmother and an unshakable
-              optimist dedicated in helping you become the person you most want
-              to be.
-            </p>
-            <p>
-              Certified counsellor/life coach ready to guide and help you regain
-              control of your life.
-            </p>
-          </div>
+        <h1>
+          Hi <span>I'm Joanne Rayment</span>
+        </h1>
+        <div className="bio__description">
+          <p>
+            A former nurse, wife, mother, grandmother and an unshakable optimist
+            dedicated in helping you become the person you most want to be.
+          </p>
+          <p>
+            Certified counsellor/life coach ready to guide and help you regain
+            control of your life.
+          </p>
         </div>
       </div>
     </section>
