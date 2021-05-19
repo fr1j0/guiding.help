@@ -13,45 +13,19 @@
 
     &__content
         z-index: 2
-        padding: 2rem
+        padding: 2rem 0 2rem 2rem
         grid-column: 1
         grid-row: 1
         align-self: center
         justify-self: center
-        max-width: 85%
+        width: 60vw
 
         p
             max-width: 60ch
-
-@media screen and ( min-width: $desktop )
-    .bio__content
-        h1
-            font-size: 4em
+            margin-bottom: clamp(.5rem, 2vw, 1.5rem)
 
 @media screen and ( max-width: $desktop )
     .bio__content
         grid-column: 1/-1
         grid-row: 1
         justify-self: flex-start
-
-    .bio__content
-        h1
-            font-size: 3em !important
-
-@media screen and ( max-width: 965px )
-    .bio__content
-        max-width: 60%
-
-@media screen and ( max-width: $tablet )
-    .bio__content
-        h1
-            margin-bottom: 1.5rem !important
-
-@media screen and ( max-width: 615px )
-    .bio__content
-        h1
-            font-size: 2.5em !important
-
-    .bio__description
-        p
-            font-size: 1em !important
