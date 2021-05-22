@@ -26,6 +26,13 @@ const Bio = () => {
             Certified counsellor/life coach ready to guide and help you regain
             control of your life.
           </p>
+          <a
+            href="https://calendly.com/joanne-141/free-introductory-session"
+            target="blank"
+            className="btn"
+          >
+            book a call
+          </a>
         </div>
       </div>
     </section>
